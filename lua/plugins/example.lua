@@ -18,10 +18,10 @@ if true then
       "nvim-telescope/telescope.nvim",
       keys = {
         --  git
-         { "<leader>gf", "<cmd>Telescope git_bcommits<CR>", desc = "buffer commits" },
-         { "<leader>gF", "<cmd>Telescope git_bcommits_range<CR>", mode = "v", desc = "buffer commits range" },
+        { "<leader>gf", "<cmd>Telescope git_bcommits<CR>", desc = "buffer commits" },
+        { "<leader>gF", "<cmd>Telescope git_bcommits_range<CR>", mode = "v", desc = "buffer commits range" },
         --  file path
-         { "<leader>bf", "<cmd>let @+=@%<CR>", desc = "copy file path" },
+        { "<leader>bf", "<cmd>let @+=@%<CR>", desc = "copy file path" },
         --  treesitter symbols
         -- { "<leader>bt", "<cmd>Telescope treesitter<CR>", desc = "treesitter symbols" },
         --  telescope builtin
