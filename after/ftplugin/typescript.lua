@@ -1,1 +1,1 @@
-vim.opt.makeprg = "bun %"
+vim.bo.makeprg = "bun %"

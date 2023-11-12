@@ -1,1 +1,1 @@
-vim.opt.makeprg ="cc -o main % && ./main"
+vim.bo.makeprg ="cc -o main % && ./main"
