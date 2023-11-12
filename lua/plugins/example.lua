@@ -26,6 +26,7 @@ if true then
         -- { "<leader>bt", "<cmd>Telescope treesitter<CR>", desc = "treesitter symbols" },
         --  telescope builtin
         -- { "<leader>bB", "<cmd>Telescope builtin<CR>", desc = "telescope builtin" },
+        { "<leader>.", "<cmd>make<CR> g;", desc = "make" },
       },
       opts = {
         defaults = {
