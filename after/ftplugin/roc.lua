@@ -5,6 +5,8 @@ local root_dir = vim.fs.dirname(anchor)
 
 vim.lsp.start({
   name = "roc-language-server",
-  cmd = { "/home/mapuaptu/projects/my/roc/roc-lang/target/release/roc_ls" },
+  cmd = { "/home/mapuaptu/bin/roc-x86_64/roc_language_server" },
   root_dir = root_dir,
 })
+
+vim.bo.makeprg = "roc main.roc"
