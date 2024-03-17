@@ -3,7 +3,14 @@ if true then
     -- {
     --   "neovim/nvim-lspconfig",
     --   opts = {
-    --     autoformat = false,
+    --     servers = {
+    --       purescriptls = {},
+    --     },
+    --     setup = {
+    --       purescriptls = function()
+    --         require("lspconfig").purescriptls.setup{}
+    --       end,
+    --     },
     --   },
     -- },
     {

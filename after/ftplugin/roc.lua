@@ -9,4 +9,4 @@ vim.lsp.start({
   root_dir = root_dir,
 })
 
-vim.bo.makeprg = "roc main.roc"
+vim.bo.makeprg = "roc %"
