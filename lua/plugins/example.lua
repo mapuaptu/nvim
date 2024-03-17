@@ -1,18 +1,19 @@
 if true then
   return {
-    -- {
-    --   "neovim/nvim-lspconfig",
-    --   opts = {
-    --     servers = {
-    --       purescriptls = {},
-    --     },
-    --     setup = {
-    --       purescriptls = function()
-    --         require("lspconfig").purescriptls.setup{}
-    --       end,
-    --     },
-    --   },
-    -- },
+    {
+      "neovim/nvim-lspconfig",
+      opts = {
+        servers = {
+          purescriptls = {
+            settings = {
+              purescript = {
+                formatter = "purs-tidy",
+              },
+            },
+          },
+        },
+      },
+    },
     {
       "rcarriga/nvim-notify",
       opts = {
