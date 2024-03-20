@@ -5,3 +5,4 @@ local opt = vim.opt
 opt.conceallevel = 0
 
 vim.g.autoformat = false
+vim.api.nvim_set_option("clipboard", "unnamedplus")
