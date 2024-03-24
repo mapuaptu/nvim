@@ -6,6 +6,10 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 
+-- vim.cmd("set keymap=russian-jcukenwin")
+-- vim.cmd("set keymap=set iminsert=0")
+-- vim.cmd("set keymap=set imsearch=0")
+
 require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
@@ -44,3 +48,4 @@ require("lazy").setup({
     },
   },
 })
+

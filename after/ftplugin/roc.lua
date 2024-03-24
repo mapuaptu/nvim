@@ -5,7 +5,7 @@ local root_dir = vim.fs.dirname(anchor)
 
 vim.lsp.start({
   name = "roc-language-server",
-  cmd = { "/home/mapuaptu/bin/roc-x86_64/roc_language_server" },
+  cmd = { "/home/mapuaptu/bin/roc_/roc_nightly-linux_x86_64/roc_language_server" },
   root_dir = root_dir,
 })
 
