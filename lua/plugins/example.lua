@@ -15,6 +15,23 @@ if true then
       },
     },
     {
+      "LunarVim/bigfile.nvim",
+      opts = {
+        filesize = 0.4, -- size of the file in MiB, the plugin round file sizes to the closest MiB
+        pattern = { "*" }, -- autocmd pattern or function see <### Overriding the detection of big files>
+        features = { -- features to disable
+          "indent_blankline",
+          "illuminate",
+          -- "lsp",
+          "treesitter",
+          "syntax",
+          "matchparen",
+          -- "vimopts",
+          -- "filetype",
+        },
+      },
+    },
+    {
       "akinsho/toggleterm.nvim",
       config = true,
       cmd = "ToggleTerm",
