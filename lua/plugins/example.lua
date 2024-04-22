@@ -59,18 +59,30 @@ if true then
       },
     },
     {
+      "ziontee113/icon-picker.nvim",
+      config = function()
+        require("icon-picker").setup({ disable_legacy_commands = true })
+
+        local opts = { noremap = true, silent = true }
+
+        vim.keymap.set("n", "<Leader>uI", "<cmd>IconPickerNormal<cr>", opts)
+        vim.keymap.set("n", "<Leader>uY", "<cmd>IconPickerYank<cr>", opts) --> Yank the selected icon into register
+        vim.keymap.set("i", "<C-i>", "<cmd>IconPickerInsert<cr>", opts)
+      end,
+    },
+    {
       "nvim-telescope/telescope.nvim",
       keys = {
         --  git
         { "<leader>gf", "<cmd>Telescope git_bcommits<CR>", desc = "buffer commits" },
         { "<leader>gF", "<cmd>Telescope git_bcommits_range<CR>", mode = "v", desc = "buffer commits range" },
-        --  file path
-        { "<leader>bf", "<cmd>let @+=@%<CR>", desc = "copy file path" },
         --  treesitter symbols
         -- { "<leader>bt", "<cmd>Telescope treesitter<CR>", desc = "treesitter symbols" },
         --  telescope builtin
         -- { "<leader>bB", "<cmd>Telescope builtin<CR>", desc = "telescope builtin" },
         { "<leader>.", "<cmd>make<CR> g;", desc = "make" },
+        --  TODO: move this keybind to somewhere
+        { "<leader>bf", "<cmd>let @+=@%<CR>", desc = "copy file path" },
       },
       opts = {
         defaults = {
