@@ -71,6 +71,18 @@ if true then
       end,
     },
     {
+      "iamcco/markdown-preview.nvim",
+      cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+      ft = { "markdown" },
+      build = function()
+        vim.fn["mkdp#util#install"]()
+      end,
+      keys = {
+        { "<leader>uM", "<cmd>MarkdownPreview<CR>", desc = "toggle markdown" },
+        { "<leader>um", "<cmd>MarkdownPreviewStop<CR>", desc = "toggle markdown" },
+      }
+    },
+    {
       "nvim-telescope/telescope.nvim",
       keys = {
         --  git
