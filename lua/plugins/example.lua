@@ -80,7 +80,17 @@ if true then
       keys = {
         { "<leader>uM", "<cmd>MarkdownPreview<CR>", desc = "toggle markdown" },
         { "<leader>um", "<cmd>MarkdownPreviewStop<CR>", desc = "toggle markdown" },
-      }
+      },
+    },
+    {
+      "nvim-pack/nvim-spectre",
+      keys = {
+        {
+          "<leader>Q",
+          "<cmd>lua require('spectre.actions').send_to_qf()<CR><cmd>q<CR>",
+          desc = "send ALL to quickfix",
+        },
+      },
     },
     {
       "nvim-telescope/telescope.nvim",
