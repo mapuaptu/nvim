@@ -103,8 +103,9 @@ if true then
         --  telescope builtin
         -- { "<leader>bB", "<cmd>Telescope builtin<CR>", desc = "telescope builtin" },
         { "<leader>.", "<cmd>make<CR> g;", desc = "make" },
-        --  TODO: move this keybind to somewhere
+        --  TODO: move this keybind's to somewhere
         { "<leader>bf", "<cmd>let @+=@%<CR>", desc = "copy file path" },
+        { "<leader>tr", "<cmd>TroubleRefresh<CR>", desc = "refresh Trouble" },
       },
       opts = {
         defaults = {
