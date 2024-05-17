@@ -4,6 +4,20 @@ if true then
       "neovim/nvim-lspconfig",
       opts = {
         servers = {
+          tsserver = {
+            settings = {
+              typescript = {
+                format = {
+                  insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces = false,
+                },
+              },
+              javascript = {
+                format = {
+                  insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces = false,
+                },
+              },
+            },
+          },
           purescriptls = {
             settings = {
               purescript = {
