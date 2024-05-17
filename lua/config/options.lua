@@ -5,8 +5,10 @@
 local opt = vim.opt
 
 opt.conceallevel = 0
+opt.spell = true
 
 vim.g.autoformat = false
-vim.api.nvim_set_option("clipboard", "unnamedplus")
+vim.api.nvim_set_option_value("clipboard", "unnamedplus", {})
 
-opt.langmap = "ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz"
+opt.langmap =
+  "ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz"

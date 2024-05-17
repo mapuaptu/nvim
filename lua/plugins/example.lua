@@ -3,6 +3,9 @@ if true then
     {
       "neovim/nvim-lspconfig",
       opts = {
+        inlay_hints = {
+          enabled = false,
+        },
         servers = {
           tsserver = {
             settings = {
@@ -36,10 +39,10 @@ if true then
         features = { -- features to disable
           "indent_blankline",
           "illuminate",
-          -- "lsp",
           "treesitter",
           "syntax",
           "matchparen",
+          -- "lsp",
           -- "vimopts",
           -- "filetype",
         },
@@ -80,7 +83,7 @@ if true then
         local opts = { noremap = true, silent = true }
 
         vim.keymap.set("n", "<Leader>uI", "<cmd>IconPickerNormal<cr>", opts)
-        vim.keymap.set("n", "<Leader>uY", "<cmd>IconPickerYank<cr>", opts) --> Yank the selected icon into register
+        vim.keymap.set("n", "<Leader>uY", "<cmd>IconPickerYank<cr>", opts) -- Yank the selected icon into register
         vim.keymap.set("i", "<C-i>", "<cmd>IconPickerInsert<cr>", opts)
       end,
     },
@@ -116,10 +119,6 @@ if true then
         -- { "<leader>bt", "<cmd>Telescope treesitter<CR>", desc = "treesitter symbols" },
         --  telescope builtin
         -- { "<leader>bB", "<cmd>Telescope builtin<CR>", desc = "telescope builtin" },
-        { "<leader>.", "<cmd>make<CR> g;", desc = "make" },
-        --  TODO: move this keybind's to somewhere
-        { "<leader>bf", "<cmd>let @+=@%<CR>", desc = "copy file path" },
-        { "<leader>tr", "<cmd>TroubleRefresh<CR>", desc = "refresh Trouble" },
       },
       opts = {
         defaults = {
