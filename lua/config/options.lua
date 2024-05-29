@@ -6,6 +6,7 @@ local opt = vim.opt
 
 opt.conceallevel = 0
 opt.spell = true
+opt.swapfile = false
 
 vim.g.autoformat = false
 vim.api.nvim_set_option_value("clipboard", "unnamedplus", {})
