@@ -111,10 +111,14 @@ if true then
     },
     {
       "nvim-telescope/telescope.nvim",
+      dependencies = {
+        "debugloop/telescope-undo.nvim",
+      },
       keys = {
         --  git
         { "<leader>gf", "<cmd>Telescope git_bcommits<CR>", desc = "buffer commits" },
         { "<leader>gF", "<cmd>Telescope git_bcommits_range<CR>", mode = "v", desc = "buffer commits range" },
+        { "<leader>tu", "<cmd>Telescope undo<CR>", mode = "n", desc = "telescope undo" },
         --  treesitter symbols
         -- { "<leader>bt", "<cmd>Telescope treesitter<CR>", desc = "treesitter symbols" },
         --  telescope builtin
