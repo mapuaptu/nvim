@@ -7,7 +7,7 @@ if true then
           enabled = false,
         },
         servers = {
-          tsserver = {
+          vtsls = {
             settings = {
               typescript = {
                 format = {
@@ -21,7 +21,7 @@ if true then
               },
             },
           },
-          purescriptls = {
+         purescriptls = {
             settings = {
               purescript = {
                 formatter = "purs-tidy",
