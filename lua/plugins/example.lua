@@ -21,13 +21,13 @@ if true then
               },
             },
           },
-          purescriptls = {
-            settings = {
-              purescript = {
-                formatter = "purs-tidy",
-              },
-            },
-          },
+          -- purescriptls = {
+          --   settings = {
+          --     purescript = {
+          --       formatter = "purs-tidy",
+          --     },
+          --   },
+          -- },
         },
       },
     },
@@ -47,7 +47,15 @@ if true then
           -- "filetype",
         },
       },
-      { "nvim-neorg/neorg", opts = {} },
+      -- {
+      --   "nvim-neorg/neorg",
+      --   opts = {
+      --     load = {
+      --       ["core.defaults"] = {},
+      --       ["core.concealer"] = {},
+      --     },
+      --   },
+      -- },
     },
     {
       "akinsho/toggleterm.nvim",
@@ -76,30 +84,30 @@ if true then
         stages = "static",
       },
     },
-    {
-      "ziontee113/icon-picker.nvim",
-      config = function()
-        require("icon-picker").setup({ disable_legacy_commands = true })
-
-        local opts = { noremap = true, silent = true }
-
-        vim.keymap.set("n", "<Leader>uI", "<cmd>IconPickerNormal<cr>", opts)
-        vim.keymap.set("n", "<Leader>uY", "<cmd>IconPickerYank<cr>", opts) -- Yank the selected icon into register
-        vim.keymap.set("i", "<C-i>", "<cmd>IconPickerInsert<cr>", opts)
-      end,
-    },
-    {
-      "iamcco/markdown-preview.nvim",
-      cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-      ft = { "markdown" },
-      build = function()
-        vim.fn["mkdp#util#install"]()
-      end,
-      keys = {
-        { "<leader>uM", "<cmd>MarkdownPreview<CR>", desc = "toggle markdown" },
-        { "<leader>um", "<cmd>MarkdownPreviewStop<CR>", desc = "toggle markdown" },
-      },
-    },
+    -- {
+    --   "ziontee113/icon-picker.nvim",
+    --   config = function()
+    --     require("icon-picker").setup({ disable_legacy_commands = true })
+    --
+    --     local opts = { noremap = true, silent = true }
+    --
+    --     vim.keymap.set("n", "<Leader>uI", "<cmd>IconPickerNormal<cr>", opts)
+    --     vim.keymap.set("n", "<Leader>uY", "<cmd>IconPickerYank<cr>", opts) -- Yank the selected icon into register
+    --     vim.keymap.set("i", "<C-i>", "<cmd>IconPickerInsert<cr>", opts)
+    --   end,
+    -- },
+    -- {
+    --   "iamcco/markdown-preview.nvim",
+    --   cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    --   ft = { "markdown" },
+    --   build = function()
+    --     vim.fn["mkdp#util#install"]()
+    --   end,
+    --   keys = {
+    --     { "<leader>uM", "<cmd>MarkdownPreview<CR>", desc = "toggle markdown" },
+    --     { "<leader>um", "<cmd>MarkdownPreviewStop<CR>", desc = "toggle markdown" },
+    --   },
+    -- },
     {
       "nvim-pack/nvim-spectre",
       keys = {
