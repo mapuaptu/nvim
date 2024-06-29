@@ -21,7 +21,7 @@ if true then
               },
             },
           },
-         purescriptls = {
+          purescriptls = {
             settings = {
               purescript = {
                 formatter = "purs-tidy",
@@ -47,6 +47,7 @@ if true then
           -- "filetype",
         },
       },
+      { "nvim-neorg/neorg", opts = {} },
     },
     {
       "akinsho/toggleterm.nvim",
