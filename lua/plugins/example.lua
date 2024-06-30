@@ -47,15 +47,23 @@ if true then
           -- "filetype",
         },
       },
-      -- {
-      --   "nvim-neorg/neorg",
-      --   opts = {
-      --     load = {
-      --       ["core.defaults"] = {},
-      --       ["core.concealer"] = {},
-      --     },
-      --   },
-      -- },
+      {
+        "nvim-neorg/neorg",
+        opts = {
+          load = {
+            ["core.defaults"] = {},
+            ["core.concealer"] = {},
+            ["core.dirman"] = {
+              config = {
+                workspaces = {
+                  default = "~/projects/my/m",
+                  m = "~/projects/my/m",
+                },
+              },
+            },
+          },
+        },
+      },
     },
     {
       "akinsho/toggleterm.nvim",
