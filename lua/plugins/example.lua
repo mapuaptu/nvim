@@ -52,7 +52,17 @@ if true then
         opts = {
           load = {
             ["core.defaults"] = {},
-            ["core.concealer"] = {},
+            ["core.concealer"] = {
+              config = {
+                icons = {
+                  todo = {
+                    urgent = {
+                      icon = ""
+                    }
+                  }
+                }
+              }
+            },
             ["core.dirman"] = {
               config = {
                 workspaces = {
