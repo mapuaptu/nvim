@@ -59,6 +59,7 @@ if true then
                   default = "~/projects/my/m",
                   m = "~/projects/my/m",
                 },
+                default_workspace = "default"
               },
             },
           },
