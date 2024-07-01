@@ -59,7 +59,7 @@ if true then
                   default = "~/projects/my/m",
                   m = "~/projects/my/m",
                 },
-                default_workspace = "default"
+                default_workspace = "default",
               },
             },
           },
@@ -93,18 +93,18 @@ if true then
         stages = "static",
       },
     },
-    -- {
-    --   "ziontee113/icon-picker.nvim",
-    --   config = function()
-    --     require("icon-picker").setup({ disable_legacy_commands = true })
-    --
-    --     local opts = { noremap = true, silent = true }
-    --
-    --     vim.keymap.set("n", "<Leader>uI", "<cmd>IconPickerNormal<cr>", opts)
-    --     vim.keymap.set("n", "<Leader>uY", "<cmd>IconPickerYank<cr>", opts) -- Yank the selected icon into register
-    --     vim.keymap.set("i", "<C-i>", "<cmd>IconPickerInsert<cr>", opts)
-    --   end,
-    -- },
+    {
+      "ziontee113/icon-picker.nvim",
+      config = function()
+        require("icon-picker").setup({ disable_legacy_commands = true })
+
+        local opts = { noremap = true, silent = true }
+
+        vim.keymap.set("n", "<Leader>uy", "<cmd>IconPickerNormal<cr>", opts)
+        vim.keymap.set("n", "<Leader>uY", "<cmd>IconPickerYank<cr>", opts) -- Yank the selected icon into register
+        vim.keymap.set("i", "<C-y>", "<cmd>IconPickerInsert<cr>", opts)
+      end,
+    },
     -- {
     --   "iamcco/markdown-preview.nvim",
     --   cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
