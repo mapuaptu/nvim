@@ -32,6 +32,14 @@ if true then
       },
     },
     {
+      "nvim-neo-tree/neo-tree.nvim",
+      opts = {
+        filesystem = {
+          bind_to_cwd = true,
+        },
+      },
+    },
+    {
       "LunarVim/bigfile.nvim",
       opts = {
         filesize = 0.4, -- size of the file in MiB, the plugin round file sizes to the closest MiB
