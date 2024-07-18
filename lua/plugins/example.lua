@@ -38,6 +38,13 @@ if true then
           bind_to_cwd = true,
         },
       },
+      {
+        "echasnovski/mini.pairs",
+        event = "VeryLazy",
+        opts = {
+          modes = { insert = true, command = false, terminal = false },
+        },
+      },
     },
     {
       "LunarVim/bigfile.nvim",
