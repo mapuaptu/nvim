@@ -113,9 +113,11 @@ if true then
     {
       "rcarriga/nvim-notify",
       opts = {
-        top_down = false,
+        -- top_down = false,
         timeout = 10000,
-        stages = "static",
+        stages = "fade",
+        max_width = 50,
+        render = "wrapped-compact",
       },
     },
     {

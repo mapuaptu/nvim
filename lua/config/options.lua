@@ -10,6 +10,7 @@ opt.swapfile = false
 opt.relativenumber = false
 
 vim.g.autoformat = false
+vim.g.syntastic_auto_jump = 0
 vim.api.nvim_set_option_value("clipboard", "unnamedplus", {})
 
 opt.langmap =
