@@ -4,6 +4,6 @@
 
 local map = vim.keymap.set
 -- map("n", "<leader>.", "<cmd>make<CR> g;", { desc = "make"})
-map("n", "g.", "<cmd>make<CR>", { desc = "make"})
-map("n", "<leader>bf", "<cmd>let @+=@%<CR>", { desc = "copy file path"})
-map("n", "<leader>tr", "<cmd>TroubleRefresh<CR>", { desc = "refresh Trouble"})
+map("n", "g.", "<cmd>make<CR>", { desc = "make" })
+map("n", "<leader>bf", "<cmd>let @+=@%<CR>", { desc = "copy file path" })
+map("n", "<leader>tr", "<cmd>TroubleRefresh<CR>", { desc = "refresh Trouble" })
