@@ -21,13 +21,6 @@ if true then
               },
             },
           },
-          -- purescriptls = {
-          --   settings = {
-          --     purescript = {
-          --       formatter = "purs-tidy",
-          --     },
-          --   },
-          -- },
         },
       },
     },
@@ -62,34 +55,6 @@ if true then
           -- "filetype",
         },
       },
-      -- {
-      --   "nvim-neorg/neorg",
-      --   opts = {
-      --     load = {
-      --       ["core.defaults"] = {},
-      --       ["core.concealer"] = {
-      --         config = {
-      --           icons = {
-      --             todo = {
-      --               urgent = {
-      --                 icon = ""
-      --               }
-      --             }
-      --           }
-      --         }
-      --       },
-      --       ["core.dirman"] = {
-      --         config = {
-      --           workspaces = {
-      --             default = "~/projects/my/m",
-      --             m = "~/projects/my/m",
-      --           },
-      --           default_workspace = "default",
-      --         },
-      --       },
-      --     },
-      --   },
-      -- },
     },
     {
       "akinsho/toggleterm.nvim",
@@ -132,18 +97,6 @@ if true then
         vim.keymap.set("i", "<C-y>", "<cmd>IconPickerInsert<cr>", opts)
       end,
     },
-    -- {
-    --   "iamcco/markdown-preview.nvim",
-    --   cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-    --   ft = { "markdown" },
-    --   build = function()
-    --     vim.fn["mkdp#util#install"]()
-    --   end,
-    --   keys = {
-    --     { "<leader>uM", "<cmd>MarkdownPreview<CR>", desc = "toggle markdown" },
-    --     { "<leader>um", "<cmd>MarkdownPreviewStop<CR>", desc = "toggle markdown" },
-    --   },
-    -- },
     {
       "nvim-pack/nvim-spectre",
       keys = {
