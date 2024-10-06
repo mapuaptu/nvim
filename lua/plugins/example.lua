@@ -44,6 +44,26 @@ if true then
       },
     },
     {
+      "mistweaverco/kulala.nvim",
+      opts = {
+        winbar = true,
+      },
+      config = function()
+        local kulala = require("kulala")
+
+        vim.keymap.set("n", "<Leader>kr", kulala.run, { desc = "Kulala run" })
+        vim.keymap.set("n", "<Leader>ka", kulala.run_all, { desc = "Kulala run all" })
+        vim.keymap.set("n", "<Leader>kl", kulala.replay, { desc = "Kulala replay" })
+        vim.keymap.set("n", "<Leader>ki", kulala.inspect, { desc = "Kulala ispect" })
+        vim.keymap.set("n", "<Leader>ks", kulala.show_stats, { desc = "Kulala stats" })
+        vim.keymap.set("n", "<Leader>kv", kulala.toggle_view, { desc = "Kulala view" })
+        vim.keymap.set("n", "<Leader>kc", kulala.copy, { desc = "Kulala copy" })
+        vim.keymap.set("n", "<Leader>kf", kulala.from_curl, { desc = "Kulala from curl" })
+        vim.keymap.set("n", "<Leader>kn", kulala.jump_next, { desc = "Kulala jump next" })
+        vim.keymap.set("n", "<Leader>kp", kulala.jump_prev, { desc = "Kulala jump prev" })
+      end,
+    },
+    {
       "gbprod/yanky.nvim",
       opts = {
         preserve_cursor_position = {
