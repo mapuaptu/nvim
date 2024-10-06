@@ -44,6 +44,27 @@ if true then
       },
     },
     {
+      "gbprod/yanky.nvim",
+      opts = {
+        preserve_cursor_position = {
+          enabled = true,
+        },
+      },
+      keys = {
+        { "y", mode = { "n", "x" }, "<Plug>(YankyYank)" },
+        { "p", mode = { "n", "x" }, "<Plug>(YankyPutAfter)" },
+        { "P", mode = { "n", "x" }, "<Plug>(YankyPutBefore)" },
+        { "gp ", mode = { "n", "x" }, "<Plug>(YankyGPutAfter)" },
+        { "gP", mode = { "n", "x" }, "<Plug>(YankyGPutBefore)" },
+        { "<c-p>", mode = { "n" }, "<Plug>(YankyPreviousEntry)" },
+        { "<c-n>", mode = { "n" }, "<Plug>(YankyNextEntry)" },
+        { "]p", mode = { "n" }, "<Plug>(YankyPutIndentAfterLinewise)" },
+        { "[p", mode = { "n" }, "<Plug>(YankyPutIndentBeforeLinewise)" },
+        { "]P", mode = { "n" }, "<Plug>(YankyPutIndentAfterCharwise)" },
+        { "[P", mode = { "n" }, "<Plug>(YankyPutIndentBeforeCharwise)" },
+      },
+    },
+    {
       "nvim-neo-tree/neo-tree.nvim",
       opts = {
         filesystem = {
@@ -136,6 +157,7 @@ if true then
         { "<leader>gf", "<cmd>Telescope git_bcommits<CR>", desc = "buffer commits" },
         { "<leader>gF", "<cmd>Telescope git_bcommits_range<CR>", mode = "v", desc = "buffer commits range" },
         { "<leader>tu", "<cmd>Telescope undo<CR>", mode = "n", desc = "telescope undo" },
+        { "<leader>th", "<cmd>Telescope yank_history<CR>", mode = "n", desc = "telescope yank history" },
         --  treesitter symbols
         -- { "<leader>bt", "<cmd>Telescope treesitter<CR>", desc = "treesitter symbols" },
         --  telescope builtin
