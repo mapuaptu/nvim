@@ -4,19 +4,8 @@ if true then
       "kawre/leetcode.nvim",
       cmd = "Leet",
       build = ":TSUpdate html",
-      -- dependencies = {
-      --   "nvim-telescope/telescope.nvim",
-      --   "nvim-lua/plenary.nvim", -- required by telescope
-      --   "MunifTanjim/nui.nvim",
-      --
-      --   -- optional
-      --   "nvim-treesitter/nvim-treesitter",
-      --   "rcarriga/nvim-notify",
-      --   "nvim-tree/nvim-web-devicons",
-      -- },
       opts = {
         lang = "javascript",
-        -- configuration goes here
       },
     },
     {
@@ -100,19 +89,25 @@ if true then
       },
     },
     {
-      "LunarVim/bigfile.nvim",
+      "folke/snacks.nvim",
+      priority = 1000,
+      lazy = false,
       opts = {
-        filesize = 0.4, -- size of the file in MiB, the plugin round file sizes to the closest MiB
-        pattern = { "*" }, -- autocmd pattern or function see <### Overriding the detection of big files>
-        features = { -- features to disable
-          "indent_blankline",
-          "illuminate",
-          "treesitter",
-          "syntax",
-          "matchparen",
-          -- "lsp",
-          -- "vimopts",
-          -- "filetype",
+        bigfile = {
+          notify = true, -- show notification when big file detected
+          size = 0.5 * 1024 * 1024, -- 0.5MB
+          -- Enable or disable features when big file detected
+          ---@param ctx {buf: number, ft:string}
+          setup = function(ctx)
+            vim.b.minianimate_disable = true
+            vim.schedule(function()
+              vim.bo[ctx.buf].syntax = ctx.ft
+            end)
+          end,
+        },
+        notifier = {
+          timeout = 10000,
+          width = { min = 50 },
         },
       },
     },
@@ -133,16 +128,6 @@ if true then
         terminal_mappings = true,
         start_in_insert = true,
         close_on_exit = true,
-      },
-    },
-    {
-      "rcarriga/nvim-notify",
-      opts = {
-        -- top_down = false,
-        timeout = 10000,
-        stages = "fade",
-        max_width = 50,
-        render = "wrapped-compact",
       },
     },
     {
@@ -173,29 +158,13 @@ if true then
         "debugloop/telescope-undo.nvim",
       },
       keys = {
-        --  git
         { "<leader>gf", "<cmd>Telescope git_bcommits<CR>", desc = "buffer commits" },
         { "<leader>gF", "<cmd>Telescope git_bcommits_range<CR>", mode = "v", desc = "buffer commits range" },
         { "<leader>tu", "<cmd>Telescope undo<CR>", mode = "n", desc = "telescope undo" },
         { "<leader>th", "<cmd>Telescope yank_history<CR>", mode = "n", desc = "telescope yank history" },
-        --  treesitter symbols
-        -- { "<leader>bt", "<cmd>Telescope treesitter<CR>", desc = "treesitter symbols" },
-        --  telescope builtin
-        -- { "<leader>bB", "<cmd>Telescope builtin<CR>", desc = "telescope builtin" },
       },
       opts = {
         defaults = {
-          -- pickers = {
-          --   git_bcommits = {
-          --     mappings = {
-          --       i = {
-          --         ["<CR>"] = function(bc)
-          --           print(bc)
-          --         end,
-          --       },
-          --     },
-          --   },
-          -- },
           layout_strategy = "vertical",
           layout_config = {
             vertical = {
@@ -205,8 +174,6 @@ if true then
               preview_height = 0.65,
             },
           },
-          -- sorting_strategy = "ascending",
-          -- winblend = 0,
         },
       },
     },
