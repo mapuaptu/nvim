@@ -1,10 +1,11 @@
 {
   "extras": [
     "lazyvim.plugins.extras.editor.outline",
+    "lazyvim.plugins.extras.util.dot",
     "lazyvim.plugins.extras.util.mini-hipatterns"
   ],
   "news": {
-    "NEWS.md": "7107"
+    "NEWS.md": "7429"
   },
-  "version": 6
+  "version": 7
 }
