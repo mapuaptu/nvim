@@ -1,6 +1,12 @@
 if true then
   return {
     {
+      "folke/which-key.nvim",
+      opts = {
+        preset = "classic",
+      },
+    },
+    {
       "kawre/leetcode.nvim",
       cmd = "Leet",
       build = ":TSUpdate html",
