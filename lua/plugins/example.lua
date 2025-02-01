@@ -15,6 +15,9 @@ if true then
       },
     },
     {
+      "danilamihailov/beacon.nvim",
+    },
+    {
       "neovim/nvim-lspconfig",
       opts = {
         inlay_hints = {
