@@ -5,7 +5,8 @@
     "lazyvim.plugins.extras.editor.outline",
     "lazyvim.plugins.extras.editor.telescope",
     "lazyvim.plugins.extras.util.dot",
-    "lazyvim.plugins.extras.util.mini-hipatterns"
+    "lazyvim.plugins.extras.util.mini-hipatterns",
+    "lazyvim.plugins.extras.util.rest"
   ],
   "install_version": 7,
   "news": {
