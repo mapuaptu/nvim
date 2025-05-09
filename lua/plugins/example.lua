@@ -46,6 +46,8 @@ if true then
       opts = {
         winbar = true,
       },
+      ft = { "http", "rest" },
+      global_keymaps = true,
       config = function()
         local kulala = require("kulala")
 
